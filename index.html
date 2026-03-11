@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Bảng Giá Admin</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Hiệu ứng sương mù */
+        .fog-container {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: #111;
+            overflow: hidden;
+        }
+
+        .fog {
+            position: absolute;
+            width: 200%;
+            height: 100%;
+            background: url('https://raw.githubusercontent.com/TomIsLoading/Swapping-Images/main/fog.png');
+            background-repeat: repeat-x;
+            background-size: contain;
+            opacity: 0.4;
+            animation: moveFog 30s linear infinite;
+        }
+
+        @keyframes moveFog {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Card Menu */
+        .menu-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 { margin-bottom: 5px; color: var(--primary-color); }
+        .admin-name { font-style: italic; color: #ccc; margin-bottom: 25px; }
+
+        /* Bảng giá */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            text-align: left;
+        }
+
+        th { color: var(--primary-color); }
+
+        .price-tag {
+            font-weight: bold;
+            color: #2ecc71;
+        }
+
+        /* Nút bấm */
+        .btn-random {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-random:hover {
+            filter: brightness(1.2);
+            box-shadow: 0 0 15px var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fog-container">
+        <div class="fog"></div>
+    </div>
+
+    <div class="menu-card" id="mainCard">
+        <h1>Bảng Giá Hỗ Trợ Kéo Tâm - Full Đỏ‼️</h1>
+        <p class="admin-name">Admin:<strong>:Đinh Quang Hào </strong></p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Hỗ Trợ Kéo Tâm</th>
+                    <th>Bảng Giá</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Activate Mobility 
+ Zin
+ Ver 1.2.3 (ios)</td>
+                    <td class="price-tag">100,000  200,000  300,000</td>
+                </tr>
+                <tr>
+                    <td>Data Game (Adr)</td>
+                    <td class="price-tag">50,000
+300,000</td>
+                </tr>
+                <tr>
+                    <td>All Các dạng (Ios)
+App Tối Ưu - Cấu Hình Máy(Khẩu lệnh , dấu câu)
+Shadowrocket - Reg </td>
+                    <td class="price-tag">50,000 300,000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button class="btn-random" onclick="changeColor()">hiệu ứng : Admin</button>
+    </div>
+
+    <script>
+        function changeColor() {
+            // Tạo màu ngẫu nhiên
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            
+            // Cập nhật biến màu chính
+            document.documentElement.style.setProperty('--primary-color', randomColor);
+            
+            // Hiệu ứng đổi màu viền card cho sinh động
+            const card = document.getElementById('mainCard');
+            card.style.border = `1px solid ${randomColor}`;
+        }
+    </script>
+</body>
+</html>
