@@ -3,166 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Bảng Giá Admin</title>
+    <title>Store App & Data - Uy Tín Giá Rẻ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #3498db;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1a1a1a;
-            color: white;
-            overflow-x: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        /* Hiệu ứng sương mù */
-        .fog-container {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            background: #111;
-            overflow: hidden;
-        }
-
-        .fog {
-            position: absolute;
-            width: 200%;
-            height: 100%;
-            background: url('https://raw.githubusercontent.com/TomIsLoading/Swapping-Images/main/fog.png');
-            background-repeat: repeat-x;
-            background-size: contain;
-            opacity: 0.4;
-            animation: moveFog 30s linear infinite;
-        }
-
-        @keyframes moveFog {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        /* Card Menu */
-        .menu-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-            border: 1px solid rgba(255,255,255,0.1);
-            width: 90%;
-            max-width: 500px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .menu-card:hover {
-            transform: translateY(-5px);
-        }
-
-        h1 { margin-bottom: 5px; color: var(--primary-color); }
-        .admin-name { font-style: italic; color: #ccc; margin-bottom: 25px; }
-
-        /* Bảng giá */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        th, td {
-            padding: 15px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            text-align: left;
-        }
-
-        th { color: var(--primary-color); }
-
-        .price-tag {
-            font-weight: bold;
-            color: #2ecc71;
-        }
-
-        /* Nút bấm */
-        .btn-random {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .btn-random:hover {
-            filter: brightness(1.2);
-            box-shadow: 0 0 15px var(--primary-color);
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; }
+        .product-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
     </style>
 </head>
 <body>
 
-    <div class="fog-container">
-        <div class="fog"></div>
+    <header class="bg-blue-600 text-white p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold italic">APP-DATA STORE</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-blue-200">Trang chủ</a>
+                <a href="#apps" class="hover:text-blue-200">App iOS/Android</a>
+                <a href="#data" class="hover:text-blue-200">Data & Cấu hình</a>
+                <a href="#" class="hover:text-blue-200">Hỗ trợ</a>
+            </nav>
+            <div class="bg-blue-800 px-4 py-2 rounded-full text-sm">
+                Hotline: 09xx.xxx.xxx
+            </div>
+        </div>
+    </header>
+
+    <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-12 px-4 text-center">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Kho App & Data Siêu Rẻ</h2>
+        <p class="text-lg opacity-90">Chỉ từ 20.000đ - Cấu hình mạnh mẽ, App bản quyền</p>
     </div>
 
-    <div class="menu-card" id="mainCard">
-        <h1>Bảng Giá Hỗ Trợ Kéo Tâm - Full Đỏ‼️</h1>
-        <p class="admin-name">Admin:<strong>:Đinh Quang Hào </strong></p>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Hỗ Trợ Kéo Tâm</th>
-                    <th>Bảng Giá</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Activate Mobility 
- Zin
- Ver 1.2.3 (ios)</td>
-                    <td class="price-tag">100,000  200,000  300,000</td>
-                </tr>
-                <tr>
-                    <td>Data Game (Adr)</td>
-                    <td class="price-tag">50,000
-300,000</td>
-                </tr>
-                <tr>
-                    <td>All Các dạng (Ios)
-App Tối Ưu - Cấu Hình Máy(Khẩu lệnh , dấu câu)
-Shadowrocket - Reg </td>
-                    <td class="price-tag">50,000 300,000</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <button class="btn-random" onclick="changeColor()">hiệu ứng : Admin</button>
-    </div>
-
-    <script>
-        function changeColor() {
-            // Tạo màu ngẫu nhiên
-            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    <main class="container mx-auto py-10 px-4">
+        
+        <h3 id="apps" class="text-2xl font-bold mb-6 border-l-4 border-blue-600 pl-3">Ứng Dụng iOS & Android</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             
-            // Cập nhật biến màu chính
-            document.documentElement.style.setProperty('--primary-color', randomColor);
+            <div class="product-card bg-white rounded-xl shadow-md overflow-hidden p-5 border border-gray-100">
+                <div class="text-blue-500 text-4xl mb-4"><i class="fab fa-apple"></i></div>
+                <h4 class="font-bold text-lg mb-2">Combo App iOS Premium</h4>
+                <p class="text-gray-500 text-sm mb-4">Mở khóa full tính năng các app hot nhất hiện nay.</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-red-500 font-bold text-xl">150.000đ</span>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700">Mua ngay</button>
+                </div>
+            </div>
+
+            <div class="product-card bg-white rounded-xl shadow-md overflow-hidden p-5 border border-gray-100">
+                <div class="text-green-500 text-4xl mb-4"><i class="fab fa-android"></i></div>
+                <h4 class="font-bold text-lg mb-2">App Android Mod</h4>
+                <p class="text-gray-500 text-sm mb-4">Cài đặt dễ dàng, không quảng cáo, full data.</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-red-500 font-bold text-xl">50.000đ</span>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700">Mua ngay</button>
+                </div>
+            </div>
+        </div>
+
+        <h3 id="data" class="text-2xl font-bold mb-6 border-l-4 border-orange-500 pl-3">Data & Cấu Hình</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            // Hiệu ứng đổi màu viền card cho sinh động
-            const card = document.getElementById('mainCard');
-            card.style.border = `1px solid ${randomColor}`;
-        }
-    </script>
+            <div class="bg-white rounded-2xl shadow-lg border-2 border-transparent hover:border-orange-400 p-6 transition-all">
+                <div class="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-orange-600">
+                    <i class="fas fa-database fa-lg"></i>
+                </div>
+                <h4 class="font-bold text-xl mb-2">Gói Data Khởi Nghiệp</h4>
+                <ul class="text-gray-600 text-sm mb-6 space-y-2">
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Dung lượng: 10GB/Tháng</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Tốc độ cao ổn định</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Hỗ trợ 24/7</li>
+                </ul>
+                <div class="text-center">
+                    <div class="text-3xl font-black text-gray-800 mb-4">20.000đ</div>
+                    <button class="w-full bg-orange-500 text-white font-bold py-3 rounded-xl hover:bg-orange-600">CHỌN GÓI</button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg border-2 border-blue-500 p-6 relative">
+                <span class="absolute -top-3 right-5 bg-red-500 text-white text-xs px-3 py-1 rounded-full uppercase font-bold">Bán chạy</span>
+                <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-blue-600">
+                    <i class="fas fa-server fa-lg"></i>
+                </div>
+                <h4 class="font-bold text-xl mb-2">Cấu Hình VIP PRO</h4>
+                <ul class="text-gray-600 text-sm mb-6 space-y-2">
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Băng thông không giới hạn</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Ping thấp cho Game thủ</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Bảo mật đa lớp</li>
+                </ul>
+                <div class="text-center">
+                    <div class="text-3xl font-black text-gray-800 mb-4">400.000đ</div>
+                    <button class="w-full bg-blue-600 text-white font-bold py-3 rounded-xl hover:bg-blue-700 shadow-lg shadow-blue-200">CHỌN GÓI</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400 py-8 mt-12">
+        <div class="container mx-auto text-center">
+            <p class="mb-2">© 2026 Store App & Data. All rights reserved.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="hover:text-white"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-white"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="hover:text-white"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
